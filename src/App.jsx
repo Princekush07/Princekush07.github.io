@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import RoadmapSection from "./components/RoadmapSection.jsx";
 import {
   education,
   experience,
@@ -16,7 +15,6 @@ import {
 const NAV = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
-  { id: "roadmap", label: "Roadmap" },
   { id: "projects", label: "Projects" },
   { id: "experience", label: "Experience" },
   { id: "contact", label: "Contact" },
@@ -158,10 +156,7 @@ export default function App() {
             </p>
             <p className="hero__lead">{site.tagline}</p>
             <div className="hero__actions">
-              <button type="button" className="btn btn--primary" onClick={() => scrollTo("roadmap")}>
-                My roadmap
-              </button>
-              <button type="button" className="btn btn--ghost" onClick={() => scrollTo("projects")}>
+              <button type="button" className="btn btn--primary" onClick={() => scrollTo("projects")}>
                 View my work
               </button>
               <a className="btn btn--ghost" href={site.linkedin} target="_blank" rel="noreferrer">
@@ -227,11 +222,9 @@ export default function App() {
           </div>
         </section>
 
-        <RoadmapSection />
-
         <section id="projects" className="section" data-reveal>
           <div className="section__head">
-            <p className="section__index">04 · Projects</p>
+            <p className="section__index">03 · Projects</p>
             <h2>Selected work from resume &amp; production</h2>
           </div>
           <div className="filters" role="tablist" aria-label="Filter projects">
@@ -272,7 +265,7 @@ export default function App() {
 
         <section id="experience" className="section" data-reveal>
           <div className="section__head">
-            <p className="section__index">05 · Experience</p>
+            <p className="section__index">04 · Experience</p>
             <h2>Career timeline</h2>
           </div>
           <div className="jobs">
@@ -301,7 +294,7 @@ export default function App() {
 
         <section id="contact" className="section section--contact" data-reveal>
           <div className="contact-card">
-            <p className="section__index">06 · Contact</p>
+            <p className="section__index">05 · Contact</p>
             <h2>Let&apos;s talk about your next platform or DevOps role</h2>
             <p>
               Notice period: <strong>{site.notice}</strong>. Best reached by email or LinkedIn.
