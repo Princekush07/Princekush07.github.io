@@ -36,7 +36,7 @@ function useReveal(deps = []) {
   }, deps);
 }
 
-const profilePhoto = `${import.meta.env.BASE_URL}profile.jpg`;
+const profilePhoto = `${import.meta.env.BASE_URL}profile.png`;
 
 function HeroProfile({ name, role }) {
   const shellRef = useRef(null);
@@ -59,6 +59,15 @@ function HeroProfile({ name, role }) {
       onPointerMove={handlePointerMove}
       onPointerLeave={resetTilt}
     >
+      <div className="hero-tech-banner" aria-hidden="true">
+        <div className="hero-tech-banner__grid" />
+        <p className="hero-tech-banner__title">BUILDING AI SYSTEMS</p>
+        <ul className="hero-tech-banner__tags">
+          <li>Vector DB</li>
+          <li>RAG Engine</li>
+          <li>Agents</li>
+        </ul>
+      </div>
       <div
         ref={shellRef}
         className="profile-shell"
