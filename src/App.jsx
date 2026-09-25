@@ -63,9 +63,11 @@ function HeroProfile({ name, role }) {
         <div className="hero-tech-banner__grid" />
         <p className="hero-tech-banner__title">BUILDING AI SYSTEMS</p>
         <ul className="hero-tech-banner__tags">
-          <li>Vector DB</li>
-          <li>RAG Engine</li>
-          <li>Agents</li>
+          <li>Python</li>
+          <li>FastAPI</li>
+          <li>Node.js</li>
+          <li>AWS</li>
+          <li>LLM</li>
         </ul>
       </div>
       <div
@@ -93,9 +95,9 @@ function HeroProfile({ name, role }) {
         </div>
       </div>
       <div className="ops-panel" aria-hidden="true">
-        <div className="ops-panel__row"><span>deploy</span><em>success</em></div>
-        <div className="ops-panel__row"><span>dns</span><em>cutover ready</em></div>
-        <div className="ops-panel__row"><span>cache</span><em>warm</em></div>
+        <div className="ops-panel__row"><span>api</span><em>REST · JWT</em></div>
+        <div className="ops-panel__row"><span>llm</span><em>validated</em></div>
+        <div className="ops-panel__row"><span>build</span><em>CI green</em></div>
         <div className="ops-panel__bar" />
       </div>
     </div>
@@ -163,6 +165,7 @@ export default function App() {
             <p className="hero__role">
               <span className="type-cursor">{site.role}</span>
             </p>
+            <p className="hero__meta hero__meta--role">{site.roleSub}</p>
             <p className="hero__lead">{site.tagline}</p>
             <div className="hero__actions">
               <button type="button" className="btn btn--primary" onClick={() => scrollTo("projects")}>
@@ -173,6 +176,9 @@ export default function App() {
               </a>
               <a className="btn btn--ghost" href={site.github} target="_blank" rel="noreferrer">
                 GitHub
+              </a>
+              <a className="btn btn--ghost" href={site.roadmap} target="_blank" rel="noreferrer">
+                Learning roadmap
               </a>
             </div>
             <p className="hero__meta">
@@ -194,7 +200,7 @@ export default function App() {
         <section id="about" className="section" data-reveal>
           <div className="section__head">
             <p className="section__index">01 · About</p>
-            <h2>Production engineer mindset, full-stack delivery</h2>
+            <h2>Application architecture, APIs, and AI-powered delivery</h2>
           </div>
           <div className="about-grid">
             <p className="about-grid__text">{summary}</p>
@@ -209,7 +215,7 @@ export default function App() {
         <section id="skills" className="section" data-reveal>
           <div className="section__head">
             <p className="section__index">02 · Skills</p>
-            <h2>Toolkit for cloud, commerce &amp; reliability</h2>
+            <h2>Stack aligned with AI application &amp; Python full stack roles</h2>
           </div>
           <div className="bento">
             {skillGroups.map((group) => (
@@ -224,7 +230,7 @@ export default function App() {
             ))}
           </div>
           <div className="upskill">
-            <h3>DevOps upskilling (in progress)</h3>
+            <h3>Current learning path</h3>
             <ul>
               {upskilling.map((u) => <li key={u}>{u}</li>)}
             </ul>
@@ -304,7 +310,7 @@ export default function App() {
         <section id="contact" className="section section--contact" data-reveal>
           <div className="contact-card">
             <p className="section__index">05 · Contact</p>
-            <h2>Let&apos;s talk about your next platform or DevOps role</h2>
+            <h2>Let&apos;s talk about your next app, API, or AI feature</h2>
             <p>
               Notice period: <strong>{site.notice}</strong>. Best reached by email or LinkedIn.
             </p>
@@ -319,6 +325,7 @@ export default function App() {
 
       <footer className="footer">
         <span>© {new Date().getFullYear()} {site.name}</span>
+        <a href={site.roadmap} target="_blank" rel="noreferrer">30-day learning roadmap</a>
         <span>{site.role}</span>
       </footer>
     </div>
